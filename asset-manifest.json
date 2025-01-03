@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9967a369.css",
+    "main.js": "/static/js/main.8662c3cf.js",
+    "static/media/SourceCodePro-Regular.ttf": "/static/media/SourceCodePro-Regular.7f0d34afc9730f19a1af.ttf",
+    "static/media/gmail-square.svg": "/static/media/gmail-square.b5881b0b8e54c6059f983b04fafb175f.svg",
+    "static/media/github-square.svg": "/static/media/github-square.fbbadb985178ba1e2fa78f830a87f947.svg",
+    "static/media/telegram-square.svg": "/static/media/telegram-square.af7882ecd6d6f5d81ef13caa319d860d.svg",
+    "static/media/window-close.svg": "/static/media/window-close.192fb3109083768c3dc93562621aecd8.svg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.9967a369.css.map": "/static/css/main.9967a369.css.map",
+    "main.8662c3cf.js.map": "/static/js/main.8662c3cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9967a369.css",
+    "static/js/main.8662c3cf.js"
+  ]
+}
