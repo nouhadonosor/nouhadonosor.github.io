@@ -6,6 +6,7 @@ import {
   useRef,
   useCallback,
   useEffect,
+  CSSProperties,
 } from "react";
 import throttle from "lodash.throttle";
 import { Vector2d } from "utils/types";
@@ -19,7 +20,7 @@ import "./window.scss";
 import { WindowPrefabsUnion } from "./window_prefabs";
 import { useTranslation } from "react-i18next";
 
-type WindowStyleType = { [k: string]: number | string };
+type WindowStyleType = CSSProperties | any;
 
 type WindowPropsType = {
   window_id: string;
@@ -39,6 +40,21 @@ export const Window: FC<PropsWithChildren<WindowPropsType>> = ({
   tab_style = {},
   useBorder = true,
 }) => {
+  const portraitMode = window.innerWidth < window.innerHeight;
+  if (portraitMode) {
+    initialPos = { x: 0, y: 0 };
+  }
+
+  const mobileMode = window.innerWidth < 600;
+  if (mobileMode) {
+    content_style = {
+      ...content_style,
+      width: "calc(100vw - 12px)",
+      height: "100%",
+    };
+  }
+
+
   const { t } = useTranslation("window");
   const [thPosition, setThPosition] = useState<Vector2d>(initialPos);
   const position = useRef<Vector2d>(initialPos);

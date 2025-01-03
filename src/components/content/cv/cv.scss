@@ -42,14 +42,28 @@
         &.avatar {
             justify-content: center;
             grid-column: 1 / 2;
-            
+
+            @media screen and (max-width: 600px) {
+                grid-column: 1 / -1;
+            }
+
+            grid-row: auto;
+            width: 100%;
+
             img {
                 width: 100%;
+
             }
         }
 
         &.bio {
             grid-column: 2 / -1;
+
+            @media screen and (max-width: 600px) {
+                grid-column: 1 / -1;
+            }
+
+            grid-row: auto;
 
         }
 
@@ -80,23 +94,29 @@
             div.stack-tech strong {
                 font-style: italic;
             }
+
             ul {
                 list-style-type: square;
                 margin: auto;
             }
-
-            ul ul:has(li.stack-string) {
-                list-style: none;
-                display: ruby-base-container;
-                ::after {
-                    content: ", ";
-                }
-                :first-child::before {
-                    content: ": ";
-                }
-                :last-child::after {
-                    content: "";
-                }
+            @media screen and (min-width: 600px) {
+                ul ul:has(li.stack-string) {
+                    list-style: none;
+                    display: ruby-base-container;
+    
+                    ::after {
+                        content: ", ";
+                    }
+    
+                    :first-child::before {
+                        content: ": ";
+                    }
+    
+                    :last-child::after {
+                        content: "";
+                    }
+            }
+            
             }
         }
     }

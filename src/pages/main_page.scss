@@ -1,4 +1,5 @@
 .main-page {
+    position: fixed;
     height: 100%;
     width: 100%;
 }
@@ -23,7 +24,7 @@
     left: 5%;
     margin-bottom: 1%;
     z-index: 1;
-    font-size: 8vh;
+    font-size: clamp(30px, 10vmin, 100px);
     transition: 0.25s;
     animation: 1s fadein;
     mix-blend-mode: difference;
@@ -37,7 +38,7 @@
     top: 40%;
     left: 5%;
     z-index: 1;
-    font-size: 5vh;
+    font-size: clamp(20px, 8vmin, 50px);
     transition: 0.25s;
     animation: 1s fadein;
     mix-blend-mode: difference;
