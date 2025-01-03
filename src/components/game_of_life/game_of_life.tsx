@@ -169,25 +169,28 @@ class GameOfLife extends React.Component<BoardPropsType, BoardStateType> {
     return cells;
   }
 
-  handleMouseDownEvent = (event: MouseEvent) => {
+  handleMouseDownEvent = (event: MouseEvent | TouchEvent) => {
     if (!this.state.isMouseDragging) {
       this.rerenderOnEvent(event);
     }
     this.setState({ isMouseDragging: true, isPaused: true });
   };
-  handleMouseUpEvent = (event: MouseEvent) => {
+  handleMouseUpEvent = (event: MouseEvent | TouchEvent) => {
     this.setState({ isMouseDragging: false, isPaused: false });
   };
-  handleMouseMoveDownEvent = (event: MouseEvent) => {
+  handleMouseMoveDownEvent = (event: MouseEvent | TouchEvent) => {
     if (this.state.isMouseDragging) {
       this.rerenderOnEvent(event);
     }
   };
 
-  rerenderOnEvent(event: MouseEvent) {
+  rerenderOnEvent(event: MouseEvent | TouchEvent) {
+    const clientX = event instanceof MouseEvent ? event.clientX : event.touches[0].clientX;
+    const clientY = event instanceof MouseEvent ? event.clientY : event.touches[0].clientY;
+
     const elemOffset = this.getElementOffset();
-    const offsetX = event.clientX - elemOffset.x;
-    const offsetY = event.clientY - elemOffset.y;
+    const offsetX = clientX - elemOffset.x;
+    const offsetY = clientY - elemOffset.y;
 
     const x = Math.floor(offsetX / this.state.cell_size);
     const y = Math.floor(offsetY / this.state.cell_size);
@@ -219,6 +222,10 @@ class GameOfLife extends React.Component<BoardPropsType, BoardStateType> {
     window.addEventListener("mousedown", this.handleMouseDownEvent);
     window.addEventListener("mouseup", this.handleMouseUpEvent);
     window.addEventListener("mousemove", this.handleMouseMoveDownEvent);
+
+    window.addEventListener("touchstart", this.handleMouseDownEvent);
+    window.addEventListener("touchend", this.handleMouseUpEvent);
+    window.addEventListener("touchmove", this.handleMouseMoveDownEvent);
     if (this.mounted) {
       this.setState({ isRunning: true });
     }
@@ -229,6 +236,10 @@ class GameOfLife extends React.Component<BoardPropsType, BoardStateType> {
     window.removeEventListener("mousedown", this.handleMouseDownEvent);
     window.removeEventListener("mouseup", this.handleMouseUpEvent);
     window.removeEventListener("mousemove", this.handleMouseMoveDownEvent);
+
+    window.removeEventListener("touchstart", this.handleMouseDownEvent);
+    window.removeEventListener("touchend", this.handleMouseUpEvent);
+    window.removeEventListener("touchmove", this.handleMouseMoveDownEvent);
     this.setState({ isRunning: false });
     this.handleClear();
     if (this.timeoutHandler) {
