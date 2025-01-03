@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.40628592.css",
-    "main.js": "/static/js/main.c19350a3.js",
+    "main.css": "/static/css/main.a3312a8b.css",
+    "main.js": "/static/js/main.b45eb6be.js",
     "static/media/SourceCodePro-Regular.ttf": "/static/media/SourceCodePro-Regular.7f0d34afc9730f19a1af.ttf",
     "static/media/gmail-square.svg": "/static/media/gmail-square.b5881b0b8e54c6059f983b04fafb175f.svg",
     "static/media/github-square.svg": "/static/media/github-square.fbbadb985178ba1e2fa78f830a87f947.svg",
@@ -9,11 +9,11 @@
     "static/media/window-close.svg": "/static/media/window-close.192fb3109083768c3dc93562621aecd8.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.40628592.css.map": "/static/css/main.40628592.css.map",
-    "main.c19350a3.js.map": "/static/js/main.c19350a3.js.map"
+    "main.a3312a8b.css.map": "/static/css/main.a3312a8b.css.map",
+    "main.b45eb6be.js.map": "/static/js/main.b45eb6be.js.map"
   },
   "entrypoints": [
-    "static/css/main.40628592.css",
-    "static/js/main.c19350a3.js"
+    "static/css/main.a3312a8b.css",
+    "static/js/main.b45eb6be.js"
   ]
 }
