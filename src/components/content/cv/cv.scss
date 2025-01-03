@@ -42,6 +42,10 @@
         &.avatar {
             justify-content: center;
             grid-column: 1 / 2;
+            
+            img {
+                width: 100%;
+            }
         }
 
         &.bio {

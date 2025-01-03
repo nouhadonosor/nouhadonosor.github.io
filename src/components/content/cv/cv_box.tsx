@@ -26,7 +26,7 @@ type CVBoxAvatarType = {
 };
 
 export const CVBoxAvatar: FC<CVBoxAvatarType> = ({
-  path_to_avatar = "/avatar.png",
+  path_to_avatar = "/avatar.jpg",
 }) => {
   return (
     <div className="cv-box avatar">
