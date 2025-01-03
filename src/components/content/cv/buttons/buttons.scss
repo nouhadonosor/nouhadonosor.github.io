@@ -1,0 +1,44 @@
+@import 'styles/mixins';
+@import 'styles/colors';
+
+@mixin contact-button($color) {
+    $button-size: 60px;
+    $border-color: $color;
+
+
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content: flex-end;
+
+
+    position: relative;
+    
+    width: $button-size;
+    height: $button-size;
+    margin: 5px;
+    @include border-outer($border-color);
+
+    &.pressed {
+        @include border-inner($border-color);
+    }
+
+    &-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+.telegram-button {
+    @include contact-button(#2293c7);
+}
+
+.github-button {
+    @include contact-button(#b1b1b1);
+    background-color: white;
+}
+
+.gmail-button {
+    @include contact-button(#ff7e6f);
+    background-color: white;
+}

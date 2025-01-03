@@ -1,0 +1,2 @@
+export const REFRESH_RATE_FPS = 60;
+export const REFRESH_RATE = 1000 / REFRESH_RATE_FPS;

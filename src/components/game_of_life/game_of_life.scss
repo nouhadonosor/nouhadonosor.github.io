@@ -1,0 +1,46 @@
+$cell-color: rgb(255, 255, 255);
+$cell-color-initial: rgb(255, 255, 255);
+
+$cell-fade-duration: 0.5s;
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        background-color: $cell-color-initial;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: $cell-color;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        background-color: $cell-color;
+    }
+
+    100% {
+        opacity: 0;
+        background-color: $cell-color-initial;
+    }
+}
+
+.Cell {
+    background: $cell-color;
+    position: absolute;
+    mix-blend-mode: difference;
+    z-index: 0;
+}
+
+.Board {
+    position: relative;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.GameContainer {
+    align-content: center;
+    display: inline-grid;
+}

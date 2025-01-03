@@ -1,0 +1,17 @@
+.text-button {
+    font-family: "Trebuchet MS";
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+
+    height: max-content;
+    width: max-content;
+    left: 0;
+    top: 0;
+    z-index: inherit;
+    transition: 0.25s;
+
+    &:hover {
+        color: gray;
+    }
+}

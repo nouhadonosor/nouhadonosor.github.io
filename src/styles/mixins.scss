@@ -1,0 +1,21 @@
+@use 'sass:color';
+@import 'styles/colors';
+
+
+@mixin border-outer($color) {
+    border: 2px solid;
+    border-color: $color color.adjust($color, $red: -100, $green: -100, $blue: -100) color.adjust($color, $red: -100, $green: -100, $blue: -100) $color;
+}
+
+@mixin border-inner($color) {
+    border: 2px solid;
+    border-color: color.adjust($color, $red: -100, $green: -100, $blue: -100) $color $color color.adjust($color, $red: -100, $green: -100, $blue: -100);
+}
+
+@mixin hl-border-outer() {
+    @include border-outer($window-border-color-main)
+}
+
+@mixin hl-border-inner() {
+    @include border-inner($window-border-color-main)
+}

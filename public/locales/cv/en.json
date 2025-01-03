@@ -1,0 +1,126 @@
+{
+    "headers": {
+        "experience": "EXPERIENCE",
+        "stack": "STACK"
+    },
+    "bio": "Python Developer with over 4 years of commercial backend development experience and more than 5 years in IT. Skilled in building microservices, developing data analysis solutions, and designing system architectures.",
+    "experience": [
+        {
+            "company": "Freelance",
+            "role": "Python developer",
+            "from": "2018-03",
+            "to": "2020-09",
+            "achievments": [
+                "Built CRM systems for NGOs using various APIs and ORMs.",
+                "Created Telegram bots, parsers, and backend solutions for websites."
+            ]
+        },
+        {
+            "company": "Rosbank",
+            "role": "Python developer",
+            "from": "2021-09",
+            "to": "2021-12",
+            "achievments": [
+                "Developed investment services, including reporting functionality.",
+                "Optimized database queries and contributed to architecture improvements."
+            ]
+        },
+        {
+            "company": "Yandex Practicum",
+            "role": "Code Rewiever",
+            "from": "2022-05",
+            "to": "2023-02",
+            "achievments": [
+                "Reviewed student assignments and assisted in mastering Python."
+            ]
+        },
+        {
+            "company": "Sberbank",
+            "role": "Python developer",
+            "from": "2022-08",
+            "to": "2023-08",
+            "achievments": [
+                "Designed and implemented data processing microservices.",
+                "Conducted statistical and natural language data analysis.",
+                "Contributed to technical architecture design."
+            ]
+        },
+        {
+            "company": "CodeScoring",
+            "role": "Fullstack Developer",
+            "from": "2023-08",
+            "to": null,
+            "achievments": [
+                "Developed software in the field of application security.",
+                "Integrated systems and automated business processes."
+            ]
+        }
+    ],
+    "stack": [
+        {
+            "name": "Python",
+            "items": [
+                {
+                    "name": "Databases",
+                    "items": [
+                        "PostgreSQL",
+                        "MySQL",
+                        "SQLite",
+                        "Redis"
+                    ]
+                },
+                {
+                    "name": "Web frameworks",
+                    "items": [
+                        "Django",
+                        "Flask",
+                        "aiohttp",
+                        "FastAPI"
+                    ]
+                },
+                {
+                    "name": "ORM",
+                    "items": [
+                        "Django ORM",
+                        "peewee",
+                        "SQLAlchemy"
+                    ]
+                },
+                {
+                    "name": "Data analysis",
+                    "items": [
+                        "pandas",
+                        "numpy",
+                        "matplotlib"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "React",
+            "items": [
+                {
+                    "name": "Libs",
+                    "items": [
+                        "React Native",
+                        "Next.js",
+                        "React Router",
+                        "Redux",
+                        "Recoil"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Golang (basic)",
+            "items": [
+                {
+                    "name": "Libs",
+                    "items": [
+                        "Builtin libs"
+                    ]
+                }
+            ]
+        }
+    ]
+}

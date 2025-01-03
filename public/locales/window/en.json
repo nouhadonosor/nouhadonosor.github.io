@@ -1,0 +1,8 @@
+{
+    "about_me_tab_text": "About me",
+    "settings_tab_text": "Settings",
+    "settings": {
+        "language_row_header": "Language",
+        "run_game_of_life": "Game of life"
+    }
+}
