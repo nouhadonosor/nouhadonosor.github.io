@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.a3312a8b.css",
+    "main.css": "/static/css/main.b4e5af35.css",
     "main.js": "/static/js/main.bf68c7a6.js",
     "static/media/SourceCodePro-Regular.ttf": "/static/media/SourceCodePro-Regular.7f0d34afc9730f19a1af.ttf",
     "static/media/gmail-square.svg": "/static/media/gmail-square.b5881b0b8e54c6059f983b04fafb175f.svg",
@@ -9,11 +9,11 @@
     "static/media/window-close.svg": "/static/media/window-close.192fb3109083768c3dc93562621aecd8.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.a3312a8b.css.map": "/static/css/main.a3312a8b.css.map",
+    "main.b4e5af35.css.map": "/static/css/main.b4e5af35.css.map",
     "main.bf68c7a6.js.map": "/static/js/main.bf68c7a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3312a8b.css",
+    "static/css/main.b4e5af35.css",
     "static/js/main.bf68c7a6.js"
   ]
 }
