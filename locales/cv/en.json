@@ -47,7 +47,7 @@
         },
         {
             "company": "CodeScoring",
-            "role": "Fullstack Developer",
+            "role": "Techlead",
             "from": "2023-08",
             "to": null,
             "achievments": [
@@ -87,11 +87,13 @@
                     ]
                 },
                 {
-                    "name": "Data analysis",
+                    "name": "Data analysis and ML",
                     "items": [
                         "pandas",
                         "numpy",
-                        "matplotlib"
+                        "matplotlib",
+                        "pytorch",
+                        "langchain"
                     ]
                 }
             ]
@@ -112,12 +114,14 @@
             ]
         },
         {
-            "name": "Golang (basic)",
+            "name": "Golang",
             "items": [
                 {
                     "name": "Libs",
                     "items": [
-                        "Builtin libs"
+                        "jsonquery",
+                        "cobra",
+                        "gojsonschema"
                     ]
                 }
             ]
