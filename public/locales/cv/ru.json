@@ -87,11 +87,13 @@
                     ]
                 },
                 {
-                    "name": "Анализ данных",
+                    "name": "Анализ данных и ML",
                     "items": [
                         "pandas",
                         "numpy",
-                        "matplotlib"
+                        "matplotlib",
+                        "pytorch",
+                        "langchain"
                     ]
                 }
             ]
@@ -112,12 +114,14 @@
             ]
         },
         {
-            "name": "Golang (базовый уровень)",
+            "name": "Golang",
             "items": [
                 {
                     "name": "Библиотеки",
                     "items": [
-                        "Встроенные библиотеки"
+                        "jsonquery",
+                        "cobra",
+                        "gojsonschema"
                     ]
                 }
             ]
