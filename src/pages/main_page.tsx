@@ -9,8 +9,8 @@ import { useCommonDispatch } from "components/common/common_state/common_hooks";
 import { openWindow } from "components/window/window_slice";
 import "./main_page.scss";
 import { closeCurrentTab } from "components/utils/utils";
-import { useTranslation } from "react-i18next";
 import { useCommonState } from "components/common/common_state/common_hooks";
+import { useTranslationWithSkeleton } from "components/common/loading_skeleton/use_translation_with_skeleton";
 
 const ContentCanvasStyle = {
   position: "absolute",
@@ -27,7 +27,7 @@ export const MainPage: FC<{}> = () => {
   const [pageSize, setPageSize] = useState<Vector2d>({ x: 0, y: 0 });
   const thisElemRef = useRef<HTMLDivElement>(null);
   const windowDispatch = useCommonDispatch();
-  const { t } = useTranslation("main_menu");
+  const { t, loading } = useTranslationWithSkeleton("main_menu");
   const { game_of_life_running } = useCommonState();
 
   useEffect(() => {
@@ -55,18 +55,21 @@ export const MainPage: FC<{}> = () => {
         <div className="text-button-container">
           <MainMenuTextButton
             text={t("about_me_button")}
+            loading={loading}
             onClick={() => {
               windowDispatch(openWindow("aboutme"));
             }}
           />
           <MainMenuTextButton
             text={t("settings_button")}
+            loading={loading}
             onClick={() => {
               windowDispatch(openWindow("settings"));
             }}
           />
           <MainMenuTextButton
             text={t("quit_button")}
+            loading={loading}
             onClick={() => {
               closeCurrentTab();
             }}

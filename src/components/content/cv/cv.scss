@@ -23,6 +23,12 @@
         white-space: pre-wrap;
         grid-column: 1 / -1;
 
+        & > strong {
+            margin: 5px;
+            display: block;
+            color: $window-content-header-text-color;
+        }
+
         .contacts-container {
             margin-top: 20px;
             display: flex;

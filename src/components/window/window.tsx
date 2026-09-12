@@ -18,7 +18,8 @@ import { useSelector } from "react-redux";
 import { Button } from "../common/button/button";
 import "./window.scss";
 import { WindowPrefabsUnion } from "./window_prefabs";
-import { useTranslation } from "react-i18next";
+import { useTranslationWithSkeleton } from "components/common/loading_skeleton/use_translation_with_skeleton";
+import { LoadingSkeleton } from "components/common/loading_skeleton/loading_skeleton";
 
 type WindowStyleType = CSSProperties | any;
 
@@ -55,7 +56,7 @@ export const Window: FC<PropsWithChildren<WindowPropsType>> = ({
   }
 
 
-  const { t } = useTranslation("window");
+  const { t, loading } = useTranslationWithSkeleton("window");
   const [thPosition, setThPosition] = useState<Vector2d>(initialPos);
   const position = useRef<Vector2d>(initialPos);
 
@@ -181,7 +182,23 @@ export const Window: FC<PropsWithChildren<WindowPropsType>> = ({
           setIsDragging(true);
         }}
       >
-        <div className="window-tab-text">{t(tab_text as string)}</div>
+        <div className="window-tab-text">
+          {loading ? (
+            <LoadingSkeleton
+              style={{
+                alignContent: "flex-start",
+                display: "flex",
+                justifyContent: "flex-start",
+                height: "100%",
+                width: "70%",
+                lineHeight: "200%",
+                fontSize: "18px",
+              }}
+            />
+          ) : (
+            t(tab_text as string)
+          )}
+        </div>
 
         <div className="window-tab-buttons">
           <Button

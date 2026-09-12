@@ -29,6 +29,16 @@ $window-tab-text-color : $hls-window-white-text-color;
             color: $window-tab-text-color;
         }
 
+        &-loading {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            justify-content: flex-start;
+            background-color: transparent;
+            color: $window-tab-text-color;
+            font-size: 18px;
+        }
+
         &-buttons {
             display: flex;
             height: 100%;

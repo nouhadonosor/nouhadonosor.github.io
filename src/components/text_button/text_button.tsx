@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./text_button.scss";
+import { LoadingSkeleton } from "components/common/loading_skeleton/loading_skeleton";
 
 type TextButtonStyleType = { [k: string]: string | number };
 
@@ -12,6 +13,7 @@ type TextButtonType = {
   fontSize?: string;
   left?: string;
   top?: string;
+  loading?: boolean;
 };
 
 const initialStyle = {};
@@ -19,11 +21,25 @@ const initialStyle = {};
 export const MainMenuTextButton: FC<TextButtonType> = ({
   text = null,
   onClick = () => {},
+  loading = false,
   style = initialStyle,
 }) => {
+  const contentClassName = "text-button";
+
   return (
-    <div className="text-button" onClick={onClick} style={style}>
-      {text}
-    </div>
+    loading ? (
+      <LoadingSkeleton
+        style={{
+          fontFamily: "Trebuchet MS",
+          height: "max-content",
+          width: "max-content",
+          fontSize: "inherit",
+        }}
+      />
+    ) : (
+      <div className={contentClassName} onClick={onClick} style={style}>
+        {text}
+      </div>
+    )
   );
 };
