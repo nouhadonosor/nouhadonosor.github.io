@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import "./cv.scss";
-import { CVBoxAvatar, CVBoxText, CVBoxBio, CVBoxExperience, CVBoxStack } from "./cv_box";
+import { CVBoxAvatar, CVBoxBio, CVBoxExperience, CVBoxStack } from "./cv_box";
 import { MilestoneType } from "./milestone";
 
 export const CVContent: FC<{}> = () => {
