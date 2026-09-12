@@ -39,7 +39,7 @@ export const CVBoxText: FC<CVBoxType> = ({ type = "", header = "", text }) => {
   type = type ? " " + type : type;
   return (
     <div className={"cv-box" + type}>
-      {header ? <a>{header}</a> : null}
+      {header ? <strong>{header}</strong> : null}
       <span>{text}</span>
     </div>
   );

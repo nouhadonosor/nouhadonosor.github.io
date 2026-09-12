@@ -156,7 +156,7 @@ export const Window: FC<PropsWithChildren<WindowPropsType>> = ({
     };
     window.addEventListener("resize", resizeListener);
     return () => window.removeEventListener("resize", resizeListener);
-  }, []);
+  }, [ResizeHandler]);
 
   return (
     <div

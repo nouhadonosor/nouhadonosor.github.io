@@ -1,6 +1,5 @@
 import React, { ChangeEvent } from "react";
 import { Vector2d } from "utils/types";
-import { glider_flower } from "./prefabs";
 import "./game_of_life.scss";
 
 type CellPropsType = {
