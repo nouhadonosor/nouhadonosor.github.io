@@ -1,6 +1,7 @@
 {
     "about_me_tab_text": "О себе",
     "settings_tab_text": "Настройки",
+    "topographic_tab_text": "Топография",
     "settings": {
         "language_row_header": "Язык",
         "run_game_of_life": "Игра жизни"

@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Window } from "./window";
 import SettingsContent from "components/content/settings/settings";
 import { CVContent } from "components/content/cv/cv";
+import { Iframe } from "components/common/iframe/iframe";
 
 const DefaultWindow: FC<{}> = () => {
   return <Window window_id="default"></Window>;
@@ -38,7 +39,28 @@ const SettingsWindow: FC<{}> = () => {
   );
 };
 
+const TopographicWindow: FC<{}> = () => {
+  return (
+    <Window
+      window_id="topographic"
+      tab_text="topographic_tab_text"
+      content_style={{
+        width: "min(90vw, 1100px)",
+        height: "min(80vh, 760px)",
+        padding: 0,
+      }}
+    >
+      <Iframe
+        className="window-embedded-content"
+        src="https://nouhadonosor.github.io/topographic-gpu/"
+        title="Topographic GPU"
+      />
+    </Window>
+  );
+};
+
 export const WindowPrefabs = {
+  topographic: TopographicWindow,
   aboutme: AboutMeWindow,
   settings: SettingsWindow,
   default: DefaultWindow,

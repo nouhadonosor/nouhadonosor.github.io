@@ -40,7 +40,7 @@ export const MainPage: FC<{}> = () => {
     }, REFRESH_RATE);
     const observer = new ResizeObserver(listener);
     if (node) observer.observe(node);
-    return () => {};
+    return () => { };
   }, []);
 
   return (
@@ -53,6 +53,13 @@ export const MainPage: FC<{}> = () => {
         <header className="name-header">nouhadonosor</header>
 
         <div className="text-button-container">
+          <MainMenuTextButton
+            text={t("topographic_button")}
+            loading={loading}
+            onClick={() => {
+              windowDispatch(openWindow("topographic"));
+            }}
+          />
           <MainMenuTextButton
             text={t("about_me_button")}
             loading={loading}
