@@ -1,0 +1,5 @@
+.topographic-content {
+    @media screen and (max-width: 600px) {
+        height: calc(100vh - 35px) !important;
+    }
+}
